@@ -1,0 +1,50 @@
+/* Layout */
+body {
+	background-color: #333;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	max-height: 100vh;
+	min-height: 100vh;
+	overflow-x: hidden;
+	font-size: 1rem;
+}
+.layout-header, .layout-footer {
+	background-color: #222;
+	height: 2rem;
+	min-height: 2rem;
+	padding: .5rem;
+}
+.layout-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+}
+.layout-content {
+	flex: 1;
+}
+.relative {
+	position: relative;
+}
+.absolute-centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Login Form */
+.login-signup-form-container {
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+}
+.login-signup-form-container > form > h1 {
+	font-size: 1.5rem;
+	
+}
+.input-group {
+	display: flex;
+	flex-direction: column;
+}
