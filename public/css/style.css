@@ -7,7 +7,7 @@ body {
 	max-height: 100vh;
 	min-height: 100vh;
 	overflow-x: hidden;
-	font-size: 1rem;
+	font-size: 1.0rem;
 }
 .layout-header, .layout-footer {
 	background-color: #222;
@@ -34,6 +34,24 @@ body {
 	transform: translate(-50%, -50%);
 }
 
+/* Header */
+.layout-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.header-nav ul li a {
+	color: white;
+}
+.header-nav ul {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+
+
 /* Login Form */
 .login-signup-form-container {
 	display: flex;
@@ -47,4 +65,22 @@ body {
 .input-group {
 	display: flex;
 	flex-direction: column;
+}
+.input-group label {
+	margin-top: 0.25rem;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+.input-group input[type="text"], .input-group input[type="password"] {
+	margin-top: 0.25rem;
+	font-size: 1.0rem;
+	padding: .25rem;
+}
+button[type="submit"] {
+	background-color: #055;
+	color: white;
+	margin-top: 0.5rem;
+	font-size: 1.15rem;
+	padding: 0.5rem 0.75rem;
+	border-radius: .25rem;
 }

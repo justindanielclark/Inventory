@@ -1,3 +1,4 @@
+import { Document, Types } from "mongoose";
 import Role from "./Roles";
 
 interface User {
@@ -5,6 +6,7 @@ interface User {
   username: string;
   email: string;
   signupDate: Date;
+  password: string;
 }
 
 interface UserJSON {
@@ -12,6 +14,7 @@ interface UserJSON {
   username: string;
   email: string;
   signupDate: string;
+  password: string;
 }
 
 export default User;

@@ -1,5 +1,5 @@
 const Roles = ["Admin", "Base"] as const;
 
-type Role = keyof typeof Roles;
+type Role = (typeof Roles)[number];
 
 export default Role;

@@ -1,9 +1,23 @@
 </head>
 <body>
 	<header class="layout-header">
-		<% if(loggedIn) { %>
-			<p>Logged In!</p>
-		<% } else { %>
-			<p>Not Logged In</p>
-		<% } %>
+		<p>
+			<% if(user){ %>
+				User Logged In
+			<% } else { %>
+				Not Logged In
+			<% } %>
+		</p>
+		<nav class="header-nav">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<% if(!user){ %>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/signup">Signup</a></li>
+				<% } else { %>
+					<li><a href="/logout">Logout</a></li>
+				<% } %>
+				
+			</ul>
+		</nav>
 	</header>

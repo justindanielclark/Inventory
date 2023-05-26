@@ -1,15 +1,19 @@
 import express, { Response, Request, NextFunction } from "express";
+import passport from "passport";
 
 const router = express.Router();
 
 router.get("/", (req: Request, res: Response) => {
-  res.render("login", { loggedIn: false });
+  res.render("login", { user: req.user });
 });
 
 router.post("/", (req: Request, res: Response) => {
-  console.log("Received a post request at login");
+  console.log('router.post("/login")');
   console.log(req.body);
-  res.redirect("/");
+  passport.authenticate("local", {
+    successRedirect: "/success",
+    failureRedirect: "/",
+  });
 });
 
 export default router;

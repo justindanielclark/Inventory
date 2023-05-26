@@ -17,19 +17,23 @@
 			</div>
 			<div class="input-group">
 				<label for="signup_name">Username:</label>
-				<input type="text" name="signup_name" value=<%=values.signup_name%>>
+				<input type="text" name="signup_name" required autofocus value="<%=values.signup_name%>">
 			</div>
 			<div class="input-group">
 				<label for="signup_secret_key">Secret:</label>
-				<input type="password" name="signup_secret_key" value=<%=values.signup_secret_key%>>
+				<input type="password" name="signup_secret_key" required value="<%=values.signup_secret_key%>">
+			</div>
+			<div class="input-group">
+				<label for="signup_email">Email Address:</label>
+				<input type="email" name="signup_email" required value="<%=values.signup_email%>">
 			</div>
 			<div class="input-group">
 				<label for="signup_password">Password:</label>
-				<input type="password" name="signup_password" value=<%=values.signup_password%>>
+				<input type="password" name="signup_password" required value="<%=values.signup_password%>">
 			</div>
 			<div class="input-group">
 				<label for="signup_password_confirm">Confirm Password:</label>
-				<input type="password" name="signup_password_confim" value=<%=values.signup_password_confirm%>>
+				<input type="password" name="signup_password_confirm" required value="<%=values.signup_password_confirm%>">
 			</div>
 			<button type="submit" id="signup_submit_button">Signup</button>
 			<% if(failureMessages !== undefined){ %>
