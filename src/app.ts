@@ -25,9 +25,10 @@ async function main() {
       secret: SESSION_SECRET,
       resave: false,
       saveUninitialized: false,
-      // cookie: {
-      //   sameSite: "strict",
-      // },
+      cookie: {
+        sameSite: "strict",
+        maxAge: 60 * 60 * 1000,
+      },
     })
   );
   passport.use(

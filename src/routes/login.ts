@@ -7,13 +7,16 @@ router.get("/", (req: Request, res: Response) => {
   res.render("login", { user: req.user });
 });
 
-router.post("/", (req: Request, res: Response) => {
-  console.log('router.post("/login")');
-  console.log(req.body);
+router.post(
+  "/",
   passport.authenticate("local", {
-    successRedirect: "/success",
+    successRedirect: "/",
     failureRedirect: "/",
-  });
-});
+  }),
+  (req: Request, res: Response) => {
+    console.log('router.post("/login")');
+    console.log(req.body);
+  }
+);
 
 export default router;
